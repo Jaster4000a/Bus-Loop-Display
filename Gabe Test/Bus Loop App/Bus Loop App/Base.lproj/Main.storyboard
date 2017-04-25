@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Bus_Loop_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iBA-BG-tNd">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="pgB-gh-dfH">
+                                <rect key="frame" x="0.0" y="20" width="375" height="209.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oFC-Jq-1hL">
+                                        <rect key="frame" x="166.5" y="0.0" width="42" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="huH-H5-KEQ">
+                                        <rect key="frame" x="132.5" y="31.5" width="110" height="30"/>
+                                        <state key="normal" title="Update Decimal"/>
+                                        <connections>
+                                            <action selector="UpdateDecimal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OmF-QA-U9Q"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="scJ-4V-WjH">
+                                        <rect key="frame" x="0.0" y="72.5" width="375" height="63"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="FMT-gq-mOp" userLabel="Group 1">
+                                                <rect key="frame" x="0.0" y="0.0" width="119" height="63"/>
+                                                <subviews>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="# 1 #" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kLj-My-QA1">
+                                                        <rect key="frame" x="0.0" y="0.0" width="119" height="30"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                    </textField>
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="HBU-Tc-2Rb">
+                                                        <rect key="frame" x="0.0" y="35" width="119" height="29"/>
+                                                        <segments>
+                                                            <segment title="◀︎"/>
+                                                            <segment title="▶︎"/>
+                                                            <segment title="OFF"/>
+                                                        </segments>
+                                                    </segmentedControl>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="8cu-Wq-Knc" userLabel="Group 2">
+                                                <rect key="frame" x="128" y="0.0" width="119" height="63"/>
+                                                <subviews>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="# 2 #" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lOb-xx-Tnn">
+                                                        <rect key="frame" x="0.0" y="0.0" width="119" height="30"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                    </textField>
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="O4n-QB-MTp">
+                                                        <rect key="frame" x="0.0" y="35" width="119" height="29"/>
+                                                        <segments>
+                                                            <segment title="◀︎"/>
+                                                            <segment title="▶︎"/>
+                                                            <segment title="OFF"/>
+                                                        </segments>
+                                                    </segmentedControl>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="UCE-QI-GfJ" userLabel="Group 3">
+                                                <rect key="frame" x="256" y="0.0" width="119" height="63"/>
+                                                <subviews>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="# 3 #" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t4h-LY-U6G">
+                                                        <rect key="frame" x="0.0" y="0.0" width="119" height="30"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                    </textField>
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="NTk-Qq-a4c">
+                                                        <rect key="frame" x="0.0" y="35" width="119" height="29"/>
+                                                        <segments>
+                                                            <segment title="◀︎"/>
+                                                            <segment title="▶︎"/>
+                                                            <segment title="OFF"/>
+                                                        </segments>
+                                                    </segmentedControl>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="Hij-bT-Xta">
+                                        <rect key="frame" x="0.0" y="146.5" width="375" height="63"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Huf-wB-oAp" userLabel="Group 4">
+                                                <rect key="frame" x="0.0" y="0.0" width="119" height="63"/>
+                                                <subviews>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="# 4 #" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DOI-ln-2QJ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="119" height="30"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                    </textField>
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="JPU-zP-jwT">
+                                                        <rect key="frame" x="0.0" y="35" width="119" height="29"/>
+                                                        <segments>
+                                                            <segment title="◀︎"/>
+                                                            <segment title="▶︎"/>
+                                                            <segment title="OFF"/>
+                                                        </segments>
+                                                    </segmentedControl>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="E2a-Yf-f0q" userLabel="Group 5">
+                                                <rect key="frame" x="128" y="0.0" width="119" height="63"/>
+                                                <subviews>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="# 5 #" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I8S-ky-4uC">
+                                                        <rect key="frame" x="0.0" y="0.0" width="119" height="30"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                    </textField>
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="KWf-RQ-f9i">
+                                                        <rect key="frame" x="0.0" y="35" width="119" height="29"/>
+                                                        <segments>
+                                                            <segment title="◀︎"/>
+                                                            <segment title="▶︎"/>
+                                                            <segment title="OFF"/>
+                                                        </segments>
+                                                    </segmentedControl>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="866-ck-Tej" userLabel="Group 6">
+                                                <rect key="frame" x="256" y="0.0" width="119" height="63"/>
+                                                <subviews>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="# 6 #" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vFB-N7-pSB">
+                                                        <rect key="frame" x="0.0" y="0.0" width="119" height="30"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
+                                                    </textField>
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="O9n-G6-2mB">
+                                                        <rect key="frame" x="0.0" y="35" width="119" height="29"/>
+                                                        <segments>
+                                                            <segment title="◀︎"/>
+                                                            <segment title="▶︎"/>
+                                                            <segment title="OFF"/>
+                                                        </segments>
+                                                    </segmentedControl>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pgB-gh-dfH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2Io-bZ-rGU"/>
+                            <constraint firstItem="iBA-BG-tNd" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="3Cp-vz-iJB"/>
+                            <constraint firstItem="pgB-gh-dfH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="ISy-Lp-4wi"/>
+                            <constraint firstItem="iBA-BG-tNd" firstAttribute="leading" secondItem="pgB-gh-dfH" secondAttribute="leading" id="QNd-s6-056"/>
+                            <constraint firstItem="iBA-BG-tNd" firstAttribute="trailing" secondItem="pgB-gh-dfH" secondAttribute="trailing" id="j7e-yE-Zec"/>
+                            <constraint firstAttribute="trailing" secondItem="pgB-gh-dfH" secondAttribute="trailing" id="oeH-AU-m4M"/>
+                            <constraint firstItem="iBA-BG-tNd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="zWk-uQ-q4W"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="direct1" destination="HBU-Tc-2Rb" id="OMM-ED-lGa"/>
+                        <outlet property="direct2" destination="O4n-QB-MTp" id="0gm-In-iFr"/>
+                        <outlet property="direct3" destination="NTk-Qq-a4c" id="NoB-u9-neJ"/>
+                        <outlet property="direct4" destination="JPU-zP-jwT" id="D7m-Qh-BC0"/>
+                        <outlet property="direct5" destination="KWf-RQ-f9i" id="vbN-Lh-jPG"/>
+                        <outlet property="direct6" destination="O9n-G6-2mB" id="LWD-W6-9aA"/>
+                        <outlet property="textField1" destination="kLj-My-QA1" id="Mo3-RZ-E0F"/>
+                        <outlet property="textField2" destination="lOb-xx-Tnn" id="lPm-YR-D19"/>
+                        <outlet property="textField3" destination="t4h-LY-U6G" id="W09-Oe-Vly"/>
+                        <outlet property="textField4" destination="DOI-ln-2QJ" id="S7X-Pz-zy9"/>
+                        <outlet property="textField5" destination="I8S-ky-4uC" id="m9u-HS-FEN"/>
+                        <outlet property="textField6" destination="vFB-N7-pSB" id="ZdR-fz-iC8"/>
+                        <outlet property="textLabel" destination="oFC-Jq-1hL" id="TFe-8C-daC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="433" y="9"/>
+        </scene>
+    </scenes>
+</document>
