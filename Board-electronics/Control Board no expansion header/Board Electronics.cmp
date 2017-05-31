@@ -1,0 +1,251 @@
+Cmp-Mod V01 Created by PcbNew   date = 5/9/2017 22:19:45
+
+BeginCmp
+TimeStamp = 58D14F8F
+Path = 
+Reference = REF***;
+ValeurCmp = ESD-Logo_22x20mm_SilkScreen;
+IdModule  = Symbols:ESD-Logo_22x20mm_SilkScreen;
+EndCmp
+
+BeginCmp
+TimeStamp = 58C1CA15
+Path = /58AC6371
+Reference = U3;
+ValeurCmp = MCP23017;
+IdModule  = Housings_DIP:DIP-28_W7.62mm_Socket;
+EndCmp
+
+BeginCmp
+TimeStamp = 59113193
+Path = /58C2DAAA
+Reference = J8;
+ValeurCmp = CONN_02X06;
+IdModule  = Extra-Parts:Picofit-12;
+EndCmp
+
+BeginCmp
+TimeStamp = 5911314F
+Path = /58C288FE
+Reference = J4;
+ValeurCmp = CONN_02X06;
+IdModule  = Extra-Parts:Picofit-12;
+EndCmp
+
+BeginCmp
+TimeStamp = 591131A4
+Path = /58C2DAB3
+Reference = J9;
+ValeurCmp = CONN_02X06;
+IdModule  = Extra-Parts:Picofit-12;
+EndCmp
+
+BeginCmp
+TimeStamp = 58C1CA35
+Path = /58B780F9
+Reference = U4;
+ValeurCmp = MCP23017;
+IdModule  = Housings_DIP:DIP-28_W7.62mm_Socket;
+EndCmp
+
+BeginCmp
+TimeStamp = 58C1C9E7
+Path = /58BA7A35
+Reference = U1;
+ValeurCmp = Adafruit_Bluefruit_LE_UART_Friend;
+IdModule  = Extra-Parts:Blueferuit_LE_UART;
+EndCmp
+
+BeginCmp
+TimeStamp = 58C1C931
+Path = /58C4CD9F
+Reference = C1;
+ValeurCmp = C.1uF;
+IdModule  = Capacitors_THT:C_Disc_D6.0mm_W2.5mm_P5.00mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 58C1C93B
+Path = /58BF67D5
+Reference = J1;
+ValeurCmp = CONN_01X06;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x06_Pitch2.54mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 58C1C960
+Path = /58C9A214
+Reference = J3;
+ValeurCmp = CONN_02X12;
+IdModule  = Pin_Headers:Pin_Header_Straight_2x12_Pitch2.54mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 58C1C9C6
+Path = /58B74BB7
+Reference = R1;
+ValeurCmp = R220;
+IdModule  = Resistors_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal;
+EndCmp
+
+BeginCmp
+TimeStamp = 58C1C9CC
+Path = /58B60F9E
+Reference = R2;
+ValeurCmp = R4K7;
+IdModule  = Resistors_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal;
+EndCmp
+
+BeginCmp
+TimeStamp = 58C1C9D2
+Path = /58B63B84
+Reference = R3;
+ValeurCmp = R4K7;
+IdModule  = Resistors_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal;
+EndCmp
+
+BeginCmp
+TimeStamp = 58C1C9DB
+Path = /58BDBAB6
+Reference = SW1;
+ValeurCmp = SW_SPDT_LED;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x05_Pitch2.54mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 58C1C9F5
+Path = /58AB412C
+Reference = U2;
+ValeurCmp = Powerboost1000C;
+IdModule  = Extra-Parts:Powerboost1000c;
+EndCmp
+
+BeginCmp
+TimeStamp = 58C1CA55
+Path = /58B7BA61
+Reference = U5;
+ValeurCmp = MCP23017;
+IdModule  = Housings_DIP:DIP-28_W7.62mm_Socket;
+EndCmp
+
+BeginCmp
+TimeStamp = 58C1CA75
+Path = /58ADCD5B/58ADD6C3
+Reference = U6;
+ValeurCmp = ATMEGA328P-PU;
+IdModule  = Housings_DIP:DIP-28_W7.62mm_Socket;
+EndCmp
+
+BeginCmp
+TimeStamp = 58C1CA7B
+Path = /58ADCD5B/58ADDAC1
+Reference = Y1;
+ValeurCmp = Crystal;
+IdModule  = Crystals:Crystal_HC49-U_Vertical;
+EndCmp
+
+BeginCmp
+TimeStamp = 58C1E8AD
+Path = /58ADCD5B/58AE41CC
+Reference = C2;
+ValeurCmp = C20p;
+IdModule  = Capacitors_THT:C_Disc_D6.0mm_W2.5mm_P5.00mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 58C1E8B3
+Path = /58ADCD5B/58AE4207
+Reference = C3;
+ValeurCmp = C20p;
+IdModule  = Capacitors_THT:C_Disc_D6.0mm_W2.5mm_P5.00mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 58C22A84
+Path = 
+Reference = M4;
+ValeurCmp = MountingHole_4.3mm_M4_Pad;
+IdModule  = Mounting_Holes:MountingHole_4.3mm_M4_Pad;
+EndCmp
+
+BeginCmp
+TimeStamp = 58C22A94
+Path = 
+Reference = M4;
+ValeurCmp = MountingHole_4.3mm_M4_Pad;
+IdModule  = Mounting_Holes:MountingHole_4.3mm_M4_Pad;
+EndCmp
+
+BeginCmp
+TimeStamp = 58C22A95
+Path = 
+Reference = M4;
+ValeurCmp = MountingHole_4.3mm_M4_Pad;
+IdModule  = Mounting_Holes:MountingHole_4.3mm_M4_Pad;
+EndCmp
+
+BeginCmp
+TimeStamp = 58C22A96
+Path = 
+Reference = M4;
+ValeurCmp = MountingHole_4.3mm_M4_Pad;
+IdModule  = Mounting_Holes:MountingHole_4.3mm_M4_Pad;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D14F66
+Path = 
+Reference = REF***;
+ValeurCmp = OSHW-Logo2_14.6x12mm_SilkScreen;
+IdModule  = Symbols:OSHW-Logo2_14.6x12mm_SilkScreen;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D1CC77
+Path = 
+Reference = REF***;
+ValeurCmp = KiCad-Logo2_12mm_SilkScreen;
+IdModule  = Symbols:KiCad-Logo2_12mm_SilkScreen;
+EndCmp
+
+BeginCmp
+TimeStamp = 58D1D0EC
+Path = 
+Reference = G***;
+ValeurCmp = LOGO;
+IdModule  = Extra-Parts:SOE Logo;
+EndCmp
+
+BeginCmp
+TimeStamp = 59113146
+Path = /59114132
+Reference = J2;
+ValeurCmp = CONN_01X06;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x06_Pitch2.54mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 59113160
+Path = /58C2949B
+Reference = J5;
+ValeurCmp = CONN_02X06;
+IdModule  = Extra-Parts:Picofit-12;
+EndCmp
+
+BeginCmp
+TimeStamp = 59113171
+Path = /58C2D5B4
+Reference = J6;
+ValeurCmp = CONN_02X06;
+IdModule  = Extra-Parts:Picofit-12;
+EndCmp
+
+BeginCmp
+TimeStamp = 59113182
+Path = /58C2D5BD
+Reference = J7;
+ValeurCmp = CONN_02X06;
+IdModule  = Extra-Parts:Picofit-12;
+EndCmp
+
+EndListe

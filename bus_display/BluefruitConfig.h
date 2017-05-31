@@ -29,6 +29,6 @@
                                             //HWUART (displays HW UArt Activity), 
                                             //SPI (displays SPI activity, out module does not have this)
                                             //MANUAL (Manually control LED)
-#define deviceName "Bus Loop Controller"    //name of the bluetooth system
+#define deviceName "CHS Bus Loop"    //name of the bluetooth system
 
 
