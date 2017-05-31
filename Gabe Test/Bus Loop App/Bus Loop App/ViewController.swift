@@ -23,7 +23,10 @@ import CoreBluetooth
         var rxCharacteristic: CBCharacteristic?
         let writeType: CBCharacteristicWriteType = .withoutResponse
         var devicesFound:[String]=["Select Device / Disconnect"]
+        var devPh:[CBPeripheral] = []
         var isConnected=false
+        var connecting=false
+        var savedRow = 0
         var selectedDevice = "Select Device / Disconnect"
         
         @IBOutlet weak var tableView: UITableView!
@@ -58,6 +61,11 @@ import CoreBluetooth
             // Do any additional setup after loading the view, typically from a nib.
         }
         
+        override func didReceiveMemoryWarning() {
+            super.didReceiveMemoryWarning()
+            // Dispose of any resources that can be recreated.
+            
+        }
         
         //Calls this function when tap is recognised
         func dismissKeyboard(){
@@ -85,35 +93,44 @@ import CoreBluetooth
             if device != nil{
                 devicesFound.append(device! as String)
                 print(devicesFound)
+                devPh.append(peripheral)
             }
             
-            if (device?.contains(selectedDevice) == true){
-                isConnected=true
-                self.manager.stopScan()
-                self.peripheral = peripheral
-                self.peripheral.delegate = self
+            if connecting == true{
+        
+                //refer to https://gist.github.com/nolili/a583ea045dafafebb17f
+                //refer to http://www.kevinhoyt.com/2016/05/20/the-12-steps-of-bluetooth-swift/
+                //refer to https://medium.com/@ryanjjones10/how-to-set-up-ble-with-swift-2-2-34bb6f209de2
                 
-                Status.text = "Status: Connected to \(selectedDevice)"
-                manager.connect(peripheral, options: nil)
+                if (device?.contains(selectedDevice) == true){
+                    isConnected=true
+                    self.manager.stopScan()
+                    self.peripheral = peripheral
+                    self.peripheral.delegate = self
+                
+                    Status.text = "Status: Connected to \(selectedDevice)"
+                    manager.connect(peripheral, options: nil)
+                }
             }
             tableView.reloadData()
         }
         
         
         func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral){
+            
             peripheral.discoverServices(nil)
+            
         }
         
         func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?){
             for service in peripheral.services! {
                 let thisService = service as CBService
-                
-                
                 if thisService.uuid == servUUID{
                     Devservice = thisService
                     print(service.uuid)
                     peripheral.discoverCharacteristics(nil, for:thisService)
                 }
+
             }
         }
         
@@ -135,11 +152,7 @@ import CoreBluetooth
         }
         
         //        peripherals.append(peripheral)
-        override func didReceiveMemoryWarning() {
-            super.didReceiveMemoryWarning()
-            // Dispose of any resources that can be recreated.
-            
-        }
+
         
         func numberOfSections(in tableView: UITableView) -> Int {
             return 1
@@ -164,14 +177,13 @@ import CoreBluetooth
             Status.text = "Scanning"
             selectedDevice = devicesFound[0]
             }else{
+            connecting=true
+            savedRow = indexPath.row - 1
             selectedDevice = devicesFound[indexPath.row]
             Status.text = "Connecting to \(selectedDevice)"
+               
             }
             print("\(devicesFound[indexPath.row]) at indexPath \(indexPath.row) was selected")
-        }
-        
-        @IBAction func refresh(_ sender: UIButton) {
-            devicesFound = ["Select Device / Disconnect"]
         }
         
         @IBAction func UpdateDecimal(_ sender: UIButton) {
