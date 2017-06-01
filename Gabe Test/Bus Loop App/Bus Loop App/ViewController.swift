@@ -23,10 +23,9 @@ import CoreBluetooth
         var rxCharacteristic: CBCharacteristic?
         let writeType: CBCharacteristicWriteType = .withoutResponse
         var devicesFound:[String]=["Select Device / Disconnect"]
-        var devPh:[CBPeripheral] = []
+        var peripheralsFound:[CBPeripheral] = []
+        var savedRow=0
         var isConnected=false
-        var connecting=false
-        var savedRow = 0
         var selectedDevice = "Select Device / Disconnect"
         
         @IBOutlet weak var tableView: UITableView!
@@ -93,10 +92,9 @@ import CoreBluetooth
             if device != nil{
                 devicesFound.append(device! as String)
                 print(devicesFound)
-                devPh.append(peripheral)
+                peripheralsFound.append(peripheral)
+                
             }
-            
-            if connecting == true{
         
                 //refer to https://gist.github.com/nolili/a583ea045dafafebb17f
                 //refer to http://www.kevinhoyt.com/2016/05/20/the-12-steps-of-bluetooth-swift/
@@ -105,13 +103,13 @@ import CoreBluetooth
                 if (device?.contains(selectedDevice) == true){
                     isConnected=true
                     self.manager.stopScan()
+                    print(peripheralsFound)
                     self.peripheral = peripheral
                     self.peripheral.delegate = self
-                
+                    manager.connect(peripheralsFound[savedRow], options: [CBConnectPeripheralOptionNotifyOnDisconnectionKey : true])
+                    
                     Status.text = "Status: Connected to \(selectedDevice)"
-                    manager.connect(peripheral, options: nil)
                 }
-            }
             tableView.reloadData()
         }
         
@@ -177,11 +175,9 @@ import CoreBluetooth
             Status.text = "Scanning"
             selectedDevice = devicesFound[0]
             }else{
-            connecting=true
-            savedRow = indexPath.row - 1
             selectedDevice = devicesFound[indexPath.row]
             Status.text = "Connecting to \(selectedDevice)"
-               
+            savedRow = indexPath.row - 1
             }
             print("\(devicesFound[indexPath.row]) at indexPath \(indexPath.row) was selected")
         }
